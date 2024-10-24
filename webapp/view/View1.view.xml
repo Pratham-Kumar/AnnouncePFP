@@ -1,0 +1,277 @@
+<mvc:View
+    controllerName="com.sap.announcepfp.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:uxap="sap.uxap"
+    xmlns:core="sap.ui.core"
+    xmlns:semantic="sap.f.semantic"
+    xmlns:u="sap.ui.unified"
+    xmlns:f="sap.ui.layout.form"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <uxap:ObjectPageLayout
+                id="ObjectPageLayout"
+                upperCaseAnchorBar="false"
+                showAnchorBar="true"
+                enableLazyLoading="true"
+            >
+                <uxap:sections>
+                    <uxap:ObjectPageSection
+                        id="_IDGenObjectPageSection1"
+                        showTitle="false"
+                    >
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection
+                                id="_IDGenObjectPageSubSection1"
+                                title="General Info"
+                            >
+                                <uxap:blocks>
+                                <f:SimpleForm
+                                        id="_IDGenSimpleForm1"
+                                        editable="true"
+                                        layout="ResponsiveGridLayout"
+                                        labelSpanXL="4"
+                                        labelSpanL="8"
+                                        labelSpanM="4"
+                                        labelSpanS="12"
+                                        adjustLabelSpan="false"
+                                        emptySpanXL="0"
+                                        emptySpanL="0"
+                                        emptySpanM="0"
+                                        emptySpanS="0"
+                                        columnsXL="3"
+                                        columnsL="2"
+                                        columnsM="2"
+                                        singleContainerFullSize="false"
+                                    >
+                                    <VBox >
+                                    
+                                        
+
+                                       <HBox 
+                                       alignItems="Center">
+
+                                        <Label
+                                            id="_IDGenLabel3"
+                                            text="PFP Year:"
+                                            class="sapUiTinyMarginBegin"
+                                        />
+                                        <DatePicker
+                                            id="_IDGenInput123"
+                                            value=""
+                                            width="150px"
+                                            displayFormat="yyyy"
+                                            class="sapUiLargeMarginBegin"
+                                        />
+                                        <Label
+                                            id="_IDGenLabel24"
+                                            text="To"
+                                            class="sapUiTinyMarginEnd"
+                                        />
+                                        <DatePicker
+                                            id="_IDGenInput24"
+                                            value=""
+                                            width="150px"
+                                            displayFormat="yyyy"
+                                        />
+                                        </HBox>
+
+                                    <HBox 
+                                    alignItems="Center"
+                                    >
+                                    
+                                        <Label
+                                            id="_IDGenLabel1"
+                                            text="PFP Preparation:"                                           
+                                             class="sapUiTinyMarginBegin"
+                                        />
+                                        <DatePicker
+                                            id="_IDGenInput12"
+                                            value=""
+                                            width="150px"
+                                            displayFormat="MMM-yyyy"
+                                             class="sapUiTinyMarginBegin"
+                                             
+                                        />
+                                        <Label
+                                            id="_IDGenLabel2"
+                                            text="To"
+                                             class="sapUiTinyMarginBegin"
+                                        />
+                                        <DatePicker
+                                            id="_IDGenInput2"
+                                            value=""
+                                            width="150px"
+                                            displayFormat="MMM-yyyy"
+                                            class="sapUiTinyMarginBegin"
+                                        />
+                                        </HBox>
+
+                                        </VBox>
+                                       
+                                        
+
+                                     <!-- <Label text="PFP Year" />
+                        <DateRangeSelection
+                            id="DRS1"
+                            class="DRS1"
+                            displayFormat="MMM-yyyy"
+                            value="{
+                'type': 'sap.ui.model.type.DateInterval',
+                'formatOptions': {
+                    'pattern': 'yyyy'
+                },
+                'parts': [
+                    {
+                        'type': 'sap.ui.model.type.Date',
+                        'path': '/start_date'
+                    },
+                    {
+                        'type': 'sap.ui.model.type.Date',
+                        'path': '/end_date'
+                    }
+                ]
+            }"
+                            change="handleChange"
+                        />
+
+ <Label text="PFP Prepration" />
+                        <DateRangeSelection
+                            id="DRS2"
+                            class="DRS1"
+                            displayFormat="yyyy"
+                            value="{
+                'type': 'sap.ui.model.type.DateInterval',
+                'formatOptions': {
+                    'pattern': 'yyyy'
+                },
+                'parts': [
+                    {
+                        'type': 'sap.ui.model.type.Date',
+                        'path': '/start_date'
+                    },
+                    {
+                        'type': 'sap.ui.model.type.Date',
+                        'path': '/end_date'
+                    }
+                ]
+            }"
+                            change="handleChange"
+                        /> -->
+
+
+                                        
+                                        
+                                        
+                                    </f:SimpleForm>
+                                </uxap:blocks>
+                                <uxap:blocks />
+                            </uxap:ObjectPageSubSection>
+                            <uxap:ObjectPageSubSection
+                                id="_IDGenObjectPageSubSection6"
+                                title="View FP"
+                            >
+                                <uxap:blocks>
+                                    <Table
+                                        items="{jModel>/}"
+                                        id="Table"
+                                        inset="false"
+                                        mode="MultiSelect"
+                                        fixedLayout="false"
+                                  
+                                    >
+                                       
+
+                                        <columns>
+                                            <Column id="itemColumn1">
+                                                <Text
+                                                    id="directorate"
+                                                    text="Directorate"
+                                                />
+                                            </Column>
+
+                                            <Column id="itemColumn2">
+                                                <Text
+                                                    id="userdepartment"
+                                                    text="User Department"
+                                                />
+                                            </Column>
+
+                                            <Column id="itemColumn3">
+                                                <Text
+                                                    id="focalpointname"
+                                                    text="Focal Point Name"
+                                                />
+                                            </Column>
+
+                                            <Column id="itemColumn4">
+                                                <Text
+                                                    id="focalpointemailaddress"
+                                                    text="Focal Point Email Address"
+                                                />
+                                            </Column>
+                                               <Column id="itemColumn5">
+                                                <Text
+                                                    id="focalpointrole"
+                                                    text="Focal Point Role"
+                                                />
+                                            </Column>
+                                           
+                                        </columns>
+
+                                        <items>
+                                            <ColumnListItem
+                                                id="_IDGenColumnListItem1"
+                                                vAlign="Middle"
+                                         
+                                            >
+                                                <cells>
+                                                    <Text
+                                                        text="{jModel>directorate}"
+                                                    />
+                                                    <Text
+                                                        text="{jModel>userdepartment}"
+                                                    />
+                                                    <Text
+                                                        text="{jModel>focalpointname}"
+                                                    />
+                                                    <Text
+                                                        text="{jModel>focalpointemailaddress}"
+                                                    />
+                                                     <Text
+                                                        text="{jModel>focalpointrole}"
+                                                    />
+                                                </cells>
+                   
+                                            </ColumnListItem>
+                                        </items>
+                                    </Table>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
+                </uxap:sections>
+            </uxap:ObjectPageLayout>
+        </content>
+        <footer>
+            <OverflowToolbar id="idOfToolbar">
+                <ToolbarSpacer id="_IDGenToolbarSpacer2" />
+                <Button
+                    id="_IDGenButton1"
+                    text="Submit"
+                    press="onSubmit"
+                />
+                <Button
+                    id="_IDGenButton2"
+                    text="Cancel"
+                    press="onCancel"
+                />
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>
